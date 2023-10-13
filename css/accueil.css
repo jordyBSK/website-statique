@@ -1,0 +1,551 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  flex-direction: column;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*navbar*/
+.btn-menu {
+  display: flex;
+  min-width: 25%;
+  margin-right: 100px;
+  justify-content: space-between;
+}
+
+.navbar {
+  justify-content: end;
+  position: fixed;
+  display: flex;
+  min-height: 6%;
+  width: 100%;
+  z-index: 1;
+  background-color: black;
+  align-items: center;
+}
+
+
+.nav-items {
+  display: block;
+  color: #493f3f;
+  position: relative;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  font-size: 170%;
+
+}
+
+.nav-items1 {
+  display: block;
+  color: #ffffff;
+  position: relative;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  font-size: 170%;
+
+}
+
+.btn-menu a:after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 0;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+
+.btn-menu a:hover {
+  color: white;
+}
+
+.btn-menu a:hover:after {
+  width: 90%;
+}
+
+
+
+
+/*menu-burger*/
+
+.menu {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transform: scaleX(-1);
+  margin-right: 10px;
+}
+
+.menu line {
+  stroke: #ffffff;
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 0%;
+  transition: transform 0.3s, stroke-dashoffset .4s;
+  transform-origin: center;
+  stroke-width: 3px;
+}
+
+.menu .top {
+  transform: translateY(-35%);
+  -webkit-transform: translateY(-35%);
+  -moz-transform: translateY(35%);
+  -ms-transform: translateY(35%);
+  -o-transform: translateY(35%);
+}
+
+.menu.middle {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transition: opacity .3s, transform .3s;
+  -webkit-transition: opacity .3s, transform .3s;
+  -moz-transition: opacity .3s, transform .3s;
+  -ms-transition: opacity .3s, transform .3s;
+  -o-transition: opacity .3s, transform .3s;
+
+}
+
+.menu .bottom {
+  transform: translateY(33%);
+  -webkit-transform: translateY(33%);
+  -moz-transform: translateY(33%);
+  -ms-transform: translateY(33%);
+  -o-transform: translateY(33%);
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 9px;
+}
+
+.menu:hover .bottom {
+  stroke-dashoffset: 0%;
+}
+
+/*** Mode Croix ***/
+body.menu-open .menu .top {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  stroke-linecap: round;
+}
+
+body.menu-open .menu .middle {
+  transform: scaleX(0.1);
+  -webkit-transform: scaleX(0.1);
+  -moz-transform: scaleX(0.1);
+  -ms-transform: scaleX(0.1);
+  -o-transform: scaleX(0.1);
+  opacity: 0;
+}
+
+body.menu-open .menu line.bottom {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  stroke-linecap: round;
+}
+
+body.menu-open .menu .bottom {
+  stroke-dashoffset: 0%;
+}
+
+/*menu-burger*/
+
+
+
+
+
+/*navbar*/
+
+/* image */
+.image {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.image h1 {
+  color: white;
+  position: absolute;
+  animation: slideDown 1.6s;
+  text-align: center;
+  display: block;
+  font-size: 5vw;
+}
+
+.image .img {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  filter: brightness(50%);
+}
+
+
+
+
+@keyframes slideDown {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* image */
+
+
+/* a propos */
+
+.a-propos {
+  text-decoration: underline;
+}
+
+.text {
+  flex-direction: column;
+  display: flex;
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.text h1 {
+  width: 100%;
+  text-align: center;
+  justify-content: space-around;
+}
+
+/* a propos */
+
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 310px;
+
+  justify-content: end;
+}
+
+
+.jsp {
+  opacity: 0.86;
+  width: 100%;
+  background-color: black;
+
+}
+
+.img1 {
+  position: absolute;
+  margin-right: 100px;
+  height: 310px;
+  width: 30%;
+  object-fit: cover;
+  background-attachment: fixed;
+}
+
+.citation {
+  line-height: 42px;
+  text-align: start;
+  position: absolute;
+  margin-right: 45%;
+  margin-top: 3%;
+  height: 300px;
+  width: 50%;
+  object-fit: cover;
+  color: #ffffff;
+
+}
+
+.auteur {
+  position: absolute;
+  margin-right: 45%;
+  margin-top: 8%;
+  height: 300px;
+  width: 50%;
+  object-fit: cover;
+  color: white;
+}
+
+
+.container2 {
+  height: 310px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8%;
+
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  background-image: url(/image/container2.jpeg);
+  filter: brightness(50%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container2 .container-contact {
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  display: block;
+  color: #ffffff;
+  position: absolute;
+
+}
+
+
+.nous-contacter {
+  margin-top: 10px;
+  padding: 15px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 0;
+  color: black;
+  font-size: 25px;
+}
+
+/*notre équipe*/
+.equipe {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 90px;
+  margin-bottom: 180px;
+}
+
+.membres {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.membre1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.membre2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc-membre {
+  position: absolute;
+  text-align: center;
+  width: 280px;
+  color: #ffffff;
+  opacity: 0;
+  /* Initialement transparent */
+  transition: 0.6s ease;
+}
+
+.membre1:hover .desc-membre,
+.membre2:hover .desc-membre {
+  opacity: 1;
+  /* Rend l'élément opaque au survol */
+}
+
+
+.notre-equipe {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.titre {
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.btn-menu a:after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 0;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+
+.img-membre {
+  width: 100%;
+  filter: brightness(100%);
+  transition: 1s ease;
+
+}
+
+.membre1:hover .desc-membre {
+  display: block;
+}
+
+.img-membre:hover {
+  filter: brightness(50%);
+  transition: 1s ease;
+}
+
+
+
+footer {
+  background-color: black;
+  height: 24vh;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.horaire {
+  margin-top: 2%;
+  color: #ffffff;
+  list-style: none;
+}
+
+.horaire li {
+  margin-top: 10px;
+
+}
+
+.contact {
+  margin-top: 2%;
+  color: #ffffff;
+  list-style: none;
+  text-align: center;
+  margin-left: 0px;
+}
+
+.contact li {
+  margin-top: 10px;
+}
+
+.naviguation {
+  margin-top: 2%;
+  text-decoration: none;
+  color: #ffffff;
+  list-style: none;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.naviguation li {
+  margin-top: 10px;
+}
+
+.footer-bas {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  color: white;
+  margin-left: 10px;
+}
+
+.politique {
+  display: flex;
+
+  margin-left: 30px;
+}
+
+.footer-item {
+  color: #ffffff;
+  text-decoration: #ffffff
+}
+
+.social-media {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.footer-logo {
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 1570px) {
+  .navbar {
+    justify-content: center;
+    position: fixed;
+    display: flex;
+    min-height: 5%;
+    width: 100%;
+    z-index: 1;
+    background-color: black;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-menu {
+    min-width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btn-menu {
+    display: none;
+  }
+
+  .membres {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar {
+    justify-content: center;
+    position: fixed;
+    display: flex;
+    min-height: 6%;
+    width: 100%;
+    z-index: 1;
+    background-color: black;
+    flex-direction: column;
+    align-items: end;
+  }
+
+
+  .text h1 {
+    width: 100%;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 5vw;
+    width: 100%;
+
+  }
+
+
+}
+
+@media screen and (min-width: 767px) {
+  .menu {
+    display: none;
+  }
+
+}
