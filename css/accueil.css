@@ -416,6 +416,7 @@ footer {
   display: flex;
   justify-content: space-between;
   text-decoration: none;
+  bottom: 0;
 }
 
 .horaire {
@@ -471,7 +472,6 @@ h3 {
 
 .politique {
   display: flex;
-
   margin-left: 30px;
 }
 
@@ -490,7 +490,12 @@ h3 {
   margin-left: 40px;
 }
 
+.menu {
+  display: none;
+}
+
 @media screen and (max-width: 1570px) {
+
   .navbar {
     justify-content: center;
     position: fixed;
@@ -509,6 +514,7 @@ h3 {
 }
 
 @media screen and (max-width: 767px) {
+
   .btn-menu {
     display: none;
   }
@@ -537,15 +543,116 @@ h3 {
     justify-content: space-around;
     font-size: 5vw;
     width: 100%;
-
   }
 
 
 }
 
-@media screen and (min-width: 767px) {
-  .menu {
-    display: none;
+@media screen and (max-width: 428px) {
+  .image h1 {
+    font-size: 10vw;
   }
 
+  .menu {
+    display: block;
+  }
+
+
+
+
+
+
+  .container2 {
+    height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+
+  .equipe {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-bottom: 100px;
+  }
+
+  .img1 {
+    position: absolute;
+    margin-right: 0px;
+    height: 310px;
+    width: 40%;
+    object-fit: cover;
+    background-attachment: fixed;
+  }
+
+  .auteur {
+    position: absolute;
+    margin-right: 16%;
+    margin-top: 8%;
+    height: 300px;
+    width: 70%;
+    object-fit: cover;
+    color: white;
+    font-size: 20px;
+  }
+
+  .citation {
+    line-height: 42px;
+    text-align: start;
+    position: absolute;
+    margin-right: 41%;
+    margin-top: 25%;
+    height: 134px;
+    width: 58%;
+    object-fit: cover;
+    color: #ffffff;
+    font-size: 19px;
+    text-align: center;
+  }
+
+  footer {
+    background-color: black;
+    height: 94vh;
+  }
+
+  .footer {
+    display: flex;
+    text-decoration: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+
+  .contact {
+    text-align: left;
+  }
+
+  .naviguation {
+    text-align: left;
+  }
+
+  .footer-bas {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .social-media {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: column;
+  }
+
+  .politique {
+    display: flex;
+    margin-left: 30px;
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    margin-top: 20px;
+  }
 }
